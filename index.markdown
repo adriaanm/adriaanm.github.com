@@ -44,4 +44,4 @@ I hope to find time to write down some of the stuff I'm working on. In the meant
 
 
 -------------
-PS: Sorry about the spartan layout. Maybe some day I'll have some time to steal someone's CSS and customize my Jekyll deployment.
+PS: Sorry about the spartan layout. Maybe some day I'll have some time to dress up my dr. Jekyll with some [octopress](http://github.com/imathis/octopress).
