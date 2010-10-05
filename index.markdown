@@ -15,8 +15,9 @@ Concretely, my colleagues and I are working on (in decreasing order of personal 
 1. A practical effect system for Scala
 1. Type debugging for Scala
 
+<!-- Previously, I was responsible for the introduction of type constructor polymorphism (aka higher-kinded types) in Scala 2.6, around the same time I reworked Scala's parser combinator library, I contributed the kernel of the Builder pattern that allowed scrapping , and more recently I implemented (a limited form of) type constructor inference. -->
 
-I spend a fair amount of time on hacking scalac, particularly fixing bugs in the type checker. If you have a ticket that's assigned to me, but which isn't in trunk yet, maybe it's already fixed in [my fork](http://github.com/adriaanm/scala) of the official Scala repository. The branch you're looking for is ticket/NNNN.
+I spend a fair amount of time hacking scalac, particularly fixing bugs in the type checker. If you have a ticket that's assigned to me (I'm "moors" in [trac](http://lampsvn.epfl.ch/trac/scala/)), but which isn't in trunk yet, maybe it's already fixed in [my fork](http://github.com/adriaanm/scala) of the official Scala repository. The branch you're looking for is ticket/NNNN.
 
 Teaching
 ========
