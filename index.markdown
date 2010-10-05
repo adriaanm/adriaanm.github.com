@@ -11,10 +11,12 @@ I'm interested in exploiting types to make programming more productive.
 
 Concretely, my colleagues and I are working on (in decreasing order of personal involvement):
 1. Improving Scala's type inference and implicit search algorithms
-1. Virtualizing Scala to optimise embedded Domain Specific Languages
+1. Virtualizing Scala to optimize embedded Domain Specific Languages
 1. A practical effect system for Scala
 1. Type debugging for Scala
 
+
+I spend a fair amount of time on hacking scalac, particularly fixing bugs in the type checker. If you have a ticket that's assigned to me, but which isn't in trunk yet, maybe it's already fixed in [my fork](http://github.com/adriaanm/scala) of the official Scala repository. The branch you're looking for is ticket/NNNN.
 
 Teaching
 ========
@@ -38,7 +40,6 @@ I hope to find time to write down some of the stuff I'm working on. In the meant
 </li>
 {% endfor %}
 </ul>
-
 
 
 -------------
