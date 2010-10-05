@@ -1,10 +1,11 @@
 ---
+layout: default
 title: Home
 
 section: Home
 ---
 
-I'm a post-doc in [Martin Odersky's lab](http://lamp.epfl.ch). We bring you the [Scala programming language](http://scala-lang.org). My [http://people.epfl.ch/adriaan.moors](EPFL homepage) has my work contact info. Google will tell you all about [http://www.google.com/profiles/adriaanm](personal-me).
+I'm a post-doc working on the [Scala programming language](http://scala-lang.org) in [Martin Odersky's lab](http://lamp.epfl.ch). My [EPFL homepage](http://people.epfl.ch/adriaan.moors) has my work contact info. Google will tell you all about [personal-me](http://www.google.com/profiles/adriaanm).
 
 I'm interested in exploiting types to make programming more productive.
 
@@ -27,7 +28,7 @@ Teaching
 
 Research
 ========
-I hope to find time to write down some of the stuff I'm working on. In the meantime, please check [http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moors:Adriaan.html](DBLP), ask [scholar.google.com/scholar?q=author:adriaan+moors](Google Scholar), or have a look at [http://lamp.epfl.ch/publications/index.html.en](our lab's publication page).
+I hope to find time to write down some of the stuff I'm working on. In the meantime, please check [DBLP](http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moors:Adriaan.html), ask [Google Scholar](scholar.google.com/scholar?q=author:adriaan+moors), or have a look at [our lab's publication page](http://lamp.epfl.ch/publications/index.html.en).
 
 <ul>
 {% for p in site.categories.research limit:3 %}
