@@ -24,16 +24,18 @@ Research
 ========
 I hope to find time to write down some of the stuff I'm working on (or have worked on). In the meantime, please check [DBLP](http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moors:Adriaan.html), ask [Google Scholar](scholar.google.com/scholar?q=author:adriaan+moors), or have a look at [our lab's publication page](http://lamp.epfl.ch/publications/index.html.en).
 
-<div class="section list">
-  <ul>
+{% unless site.categories.research == nil %}
+Last three posts in research:
+
+<ul>
 {% for p in site.categories.research limit:3 %}
 <li>
 	<a href="{{ p.url }}">{{ p.title |  remove: "'" }}</a>
-	<span class="date">{{ p.date | date_to_string }}</span> 
 </li>
 {% endfor %}
 </ul>
-</div>
+
+{% endunless %}
 
 {% comment %}
 TODO: add entry for dissertation, parser combinator techreport,...
@@ -42,16 +44,19 @@ TODO: add entry for dissertation, parser combinator techreport,...
 Teaching
 ========
 
-<div class="section list">
-  <ul>
-    {% for p in site.categories.teaching limit:3 %}
-    <li>
-    	<a href="{{ p.url }}">{{ p.title |  remove: "'" }}</a>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+{%comment%} wouldn't it be nice if capture took arguments so I didn't have to copy/paste this from the Research section -- ugh {%endcomment%}
+{% unless site.categories.research == nil %}
+Last three posts in research:
 
+<ul>
+{% for p in site.categories.teaching limit:3 %}
+<li>
+	<a href="{{ p.url }}">{{ p.title |  remove: "'" }}</a>
+</li>
+{% endfor %}
+</ul>
+
+{% endunless %}
 
 {% comment %}
 Professional Activities

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: What's new in Scala 2.8':' type constructor inference
-categories: research
+categories: unpublished
 ---
 
 <script src="/files/highlight.pack.js"></script> 
