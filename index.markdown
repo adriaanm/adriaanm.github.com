@@ -1,10 +1,12 @@
 ---
 layout: default
-title: Home
+title: Adriaan Moors's homepage
 
 section: Home
 ---
 
+Adriaan Moors
+=============
 I'm a post-doc working on the [Scala programming language](http://scala-lang.org) in [Martin Odersky's lab](http://lamp.epfl.ch). My [EPFL homepage](http://people.epfl.ch/adriaan.moors) has my work contact info. Google will tell you all about [personal-me](http://www.google.com/profiles/adriaanm).
 
 I'm interested in exploiting types to make programming more productive.
