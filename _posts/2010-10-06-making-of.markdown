@@ -12,7 +12,7 @@ Text files. Version control. No fuss about design.
 
 GitHub's jekyll support seemed just what I needed. Getting a spartan site up was easy, but making it look half-decent (I'm no designer) was a little daunting. I couldn't find any reusable themes. They had all liberally sprinkled their personal details over their templates. Why is it still so hard to apply the elementary concepts of modular software development to websites?
 
-So I decided to steal the [bare minimum template](http://github.com/adriaanm/adriaanm.github.com/blob/4ad836e4406e1a90eb4e636601e05e72bf6abd66/_layouts/default.html) from some other jekyll deployment, an 'index.markdown' that iterated over posts in various categories, and the actual content in '_posts/', where the YAML header in a post decides in which categories it ends up.
+So I decided to steal the [bare minimum template](http://github.com/adriaanm/adriaanm.github.com/blob/4ad836e4406e1a90eb4e636601e05e72bf6abd66/_layouts/default.html) from some other jekyll deployment, cobbled together an 'index.markdown' that iterated over posts in various categories, and put some actual content in '_posts/', where the YAML header in a post decides in which categories it ends up.
 
 When I finally discovered jekyll-base, the wonders of git allowed me to pretend I started by cloning jekyll-base all along. Here's how I adapted [someone's advice](http://www.dmo.ca/blog/20080310120403/) to my repository:
 
@@ -25,7 +25,7 @@ When I finally discovered jekyll-base, the wonders of git allowed me to pretend 
     # solve conflicts
     git commit -a
 
-Maybe I should have fetched directly from github instead of my local clone.
+Maybe I should have fetched directly from github instead of my local clone. No matter, though, even with the roundabout start, git still lets me do the fetch directly from jekyll-base on github.
 
 You can check out the [flip side](http://github.com/adriaanm/adriaanm.github.com) of this website on GitHub.
 
