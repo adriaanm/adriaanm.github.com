@@ -3,7 +3,7 @@ layout: default
 title: Home
 
 section: Home
-subsections: [research, teaching, meta]
+subsections: [research, teaching, meta, archive]
 ---
 
 Adriaan Moors
@@ -24,7 +24,7 @@ Research
 ========
 I hope to find time to write down some of the stuff I'm working on (or have worked on). In the meantime, please check [DBLP](http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moors:Adriaan.html), ask [Google Scholar](scholar.google.com/scholar?q=author:adriaan+moors), or have a look at [our lab's publication page](http://lamp.epfl.ch/publications/index.html.en).
 
-<div id="post_links">
+<div class="section list">
   <ul>
 {% for p in site.categories.research limit:3 %}
 <li>
@@ -42,7 +42,7 @@ TODO: add entry for dissertation, parser combinator techreport,...
 Teaching
 ========
 
-<div id="post_links">
+<div class="section list">
   <ul>
     {% for p in site.categories.teaching limit:3 %}
     <li>
@@ -58,15 +58,4 @@ Professional Activities
 =======================
 PC member: WGP 2008, ScalaDays 2009, FTfJP 2010 
 (sub-)reviewing: JFP (special issues for MSFP 2006, WGP 2009), ICFP 2009, OOPSLA 2009, ECOOP 2010, FOOL 2010
-
-Archive
-=======
-
-<div id="post_links">
-  <ul>
-    {% for p in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
 {% endcomment %}
