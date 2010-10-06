@@ -13,7 +13,7 @@ category=$1
 title=$2
 
 date=$(date +%Y-%m-%d)
-file=$category/_posts/$date-$title.textile
+file=$category/_posts/$date-$title.markdown
 cat > $file <<END
 ---
 layout: default

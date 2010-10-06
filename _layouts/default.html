@@ -2,7 +2,7 @@
  "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-   <title>{{site.title_prefix}}{{page.title}}</title>
+   <title>{{page.title}}{{site.title_suffix}}</title>
    <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/base/base-min.css">
    <link rel="stylesheet" href="{{site.base_dir}}/css/print.css" type="text/css" media="print" />
@@ -42,10 +42,11 @@
 <div id="search"></div>
 {% endunless%}
 {%unless page.subsections == nil or page.subsections == empty %}
-	<h3>Subsections</h3>
 	<ul>
 	{% for section in page.subsections %}
-	  <li><a href="{{site.base_dir}}/{{ section }}">{{section}}</a></li>
+    {% unless site.categories[section] == nil or site.categories[section] == empty  %}	  
+      <li><a href="{{site.base_dir}}/{{ section }}">{{section}}</a></li>
+    {%endunless%}
 	{% endfor %}
 	</ul>
 {%endunless%}
@@ -54,7 +55,7 @@
         </div>
 	
 	</div>
-   <div id="ft" role="contentinfo">Design based on <a href="http://www.styleshout.com/templates/preview/FreshPick1-0/index.html">FreshPick</a></div>
+   <div id="ft" role="contentinfo">Powered by <a href="http://github.com/mojombo/jekyll/wiki">jekyll</a>, bootstrapped from <a href="http://github.com/raphinou/jekyll-base">jekyll-base</a>. Design based on <a href="http://www.styleshout.com/templates/preview/FreshPick10">FreshPick</a>.</div>
 </div>
 {% unless site.ga_id == nil or site.ga_id == empty %}
 <script type="text/javascript">

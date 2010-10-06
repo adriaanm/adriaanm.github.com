@@ -1,15 +1,16 @@
 ---
 layout: default
-title: Adriaan Moors's homepage
+title: Home
 
 section: Home
+subsections: [research, teaching, meta]
 ---
 
 Adriaan Moors
 =============
 I'm a post-doc working on the [Scala programming language](http://scala-lang.org) in [Martin Odersky's lab](http://lamp.epfl.ch). My [EPFL homepage](http://people.epfl.ch/adriaan.moors) has my work contact info. Google will tell you all about [personal-me](http://www.google.com/profiles/adriaanm).
 
-I'm interested in exploiting types to make programming more productive.
+I'm interested in exploiting static types to make programming more productive.
 
 Concretely, my colleagues and I are working on (in decreasing order of personal involvement):
 1. Improving Scala's type inference and implicit search algorithms
@@ -21,7 +22,7 @@ I spend a fair amount of time hacking scalac, particularly fixing bugs in the ty
 
 Research
 ========
-I hope to find time to write down some of the stuff I'm working on. In the meantime, please check [DBLP](http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moors:Adriaan.html), ask [Google Scholar](scholar.google.com/scholar?q=author:adriaan+moors), or have a look at [our lab's publication page](http://lamp.epfl.ch/publications/index.html.en).
+I hope to find time to write down some of the stuff I'm working on (or have worked on). In the meantime, please check [DBLP](http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moors:Adriaan.html), ask [Google Scholar](scholar.google.com/scholar?q=author:adriaan+moors), or have a look at [our lab's publication page](http://lamp.epfl.ch/publications/index.html.en).
 
 <div id="post_links">
   <ul>
@@ -69,6 +70,3 @@ Archive
   </ul>
 </div>
 {% endcomment %}
-
--------------
-PS: Sorry about the spartan layout. Maybe some day I'll have time to dress up my dr. [Jekyll](http://github.com/mojombo/jekyll/wiki) with some [octopress](http://github.com/imathis/octopress) or [jekyll-base](http://github.com/raphinou/jekyll-base).
