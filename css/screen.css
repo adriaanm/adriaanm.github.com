@@ -15,7 +15,7 @@ body {
 	color: #666666; 	
 	margin: 0; 
 	padding: 0; 
-	background: #FFF url(../images/bg.gif) repeat-x;
+	background: #FFF; // url(../images/bg.gif) repeat-x;
 	text-align: center;
 }
 
@@ -221,14 +221,6 @@ input.button {
 	
 	/* change the values of top and left to adjust the position */
 	top: 102px; left: 32px;		
-}
-
-#header #header-image {
-	position: absolute;
-	top: 12px; right: 30px;
-	width: 292px;
-	height: 234px;	
-	background: url(../images/header-bg.png) no-repeat; 
 }
 
 /*  navigation  */
