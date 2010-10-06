@@ -3,8 +3,8 @@ layout: default
 title: The making of
 categories: meta
 ---
-Meeting dr. Jekyll
-==================
+Taming dr. Jekyll
+=================
 
 After too many painful migrations from drupal and wordpress, I decided I wanted to stay in control of my content.
 
