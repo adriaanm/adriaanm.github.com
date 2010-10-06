@@ -23,7 +23,7 @@ Research
 ========
 I hope to find time to write down some of the stuff I'm working on. In the meantime, please check [DBLP](http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moors:Adriaan.html), ask [Google Scholar](scholar.google.com/scholar?q=author:adriaan+moors), or have a look at [our lab's publication page](http://lamp.epfl.ch/publications/index.html.en).
 
-<div>
+<div id="post_links">
   <ul>
 {% for p in site.categories.research limit:3 %}
 <li>
@@ -41,7 +41,7 @@ TODO: add entry for dissertation, parser combinator techreport,...
 Teaching
 ========
 
-<div>
+<div id="post_links">
   <ul>
     {% for p in site.categories.teaching limit:3 %}
     <li>
@@ -61,7 +61,7 @@ PC member: WGP 2008, ScalaDays 2009, FTfJP 2010
 Archive
 =======
 
-<div>
+<div id="post_links">
   <ul>
     {% for p in site.posts %}
     <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
