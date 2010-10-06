@@ -1,7 +1,7 @@
-----
-title: What's new in Scala 2.8: type constructor inference</title> 
-categories: notes
-----
+---
+layout: default
+title: What's new in Scala 2.8':' type constructor inference
+---
 
 <script src="/files/highlight.pack.js"></script> 
 <script> 
@@ -21,11 +21,11 @@ However, type constructor inference wasn't officially supported until 2.8. Even 
 <!-- % what is type constructor polymorphism and what is it good for? -->
 
 #Motivation
-For lack of a fuzzier name, types that abstract over types that abstract over types are called ``higher-kinded types'', which simply means that generic types, type constructors, or polymorphic types (different names for the same beast) have the same ``rights'' as their monomorphic cousins, types without type parameters. The value-level analogue of a higher-kinded type is a function that abstracts over another function, such as `List[T]`'s method `def map[U](f: T => U): List[U]`. Such a method is\footnote{More precisely, a method is automatically converted to a function, which is a value. A method itself is not a value.} a value that abstracts over a value that abstracts over a value. Of course, a value that abstracts over a value is simply a function. In this terminology, a type constructor is a function from a type to a type, and a higher-kinded type is a type function that takes a type function as an argument. These are all examples of higher-order polymorphism, which is useful on values as well as types, and the latter kind can be understood by analogy to the former.
+For lack of a fuzzier name, types that abstract over types that abstract over types are called "higher-kinded types", which simply means that generic types, type constructors, or polymorphic types (different names for the same beast) have the same "rights" as their monomorphic cousins, types without type parameters. The value-level analogue of a higher-kinded type is a function that abstracts over another function, such as `List[T]`'s method `def map[U](f: T => U): List[U]`. Such a method is\footnote{More precisely, a method is automatically converted to a function, which is a value. A method itself is not a value.} a value that abstracts over a value that abstracts over a value. Of course, a value that abstracts over a value is simply a function. In this terminology, a type constructor is a function from a type to a type, and a higher-kinded type is a type function that takes a type function as an argument. These are all examples of higher-order polymorphism, which is useful on values as well as types, and the latter kind can be understood by analogy to the former.
 
 All this may seem unnecessarily complicated at first. Nevertheless, it is simply a product of uniformity and abstraction. Instead of limiting generic types and methods to first-order mechanisms, Scala's higher-order approach is more uniform in that types can be abstracted over, whether they take type parameters or not. In the same way, functions may take arguments that are again functions, which is clearly useful. In Java, though, making a type generic (i.e., introducing a type parameter) excludes it from being abstracted over (i.e., you can't define a type parameter that itself takes type parameters, nor can you apply a type parameter to type arguments). When it comes to abstracting over values, Java's (anonymous) classes are a relatively heavyweight way of passing a method-valued argument (such as a lightweight GUI event handler or a strategy to transform data) to a method.
 
-When reading on, it may help to think about the value-level counterpart to understand higher-order type-level abstractions, which may seem somewhat baffling at first. In the following, we will sometimes replace ``type'' by ``type constructor'' in existing terminology to emphasise we are talking about the higher-order variant, without intending to exclude type constructors in other occurrences of ``type''. We will use ``proper type'' or ``monorphic type'' when referring only to types without type parameters.
+When reading on, it may help to think about the value-level counterpart to understand higher-order type-level abstractions, which may seem somewhat baffling at first. In the following, we will sometimes replace "type" by "type constructor" in existing terminology to emphasise we are talking about the higher-order variant, without intending to exclude type constructors in other occurrences of "type". We will use "proper type" or "monorphic type" when referring only to types without type parameters.
 
 #Example
 <!-- % TODO: everything below: -->
