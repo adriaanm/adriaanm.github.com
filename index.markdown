@@ -17,33 +17,50 @@ Concretely, my colleagues and I are working on (in decreasing order of personal 
 1. A practical effect system for Scala
 1. Type debugging for Scala
 
-<!-- Previously, I was responsible for the introduction of type constructor polymorphism (aka higher-kinded types) in Scala 2.6, around the same time I reworked Scala's parser combinator library, I contributed the kernel of the Builder pattern that allowed scrapping , and more recently I implemented (a limited form of) type constructor inference. -->
-
 I spend a fair amount of time hacking scalac, particularly fixing bugs in the type checker. If you have a ticket that's assigned to me (I'm "moors" in [trac](http://lampsvn.epfl.ch/trac/scala/)), but which isn't in trunk yet, maybe it's already fixed in [my fork](http://github.com/adriaanm/scala) of the official Scala repository. The branch you're looking for is ticket/NNNN.
-
-Teaching
-========
-<ul>
-{% for p in site.categories.teaching limit:3 %}
-<li>
-	<a href="{{ p.url }}">{{ p.title }}</a>
-</li>
-{% endfor %}
-</ul>
 
 Research
 ========
 I hope to find time to write down some of the stuff I'm working on. In the meantime, please check [DBLP](http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moors:Adriaan.html), ask [Google Scholar](scholar.google.com/scholar?q=author:adriaan+moors), or have a look at [our lab's publication page](http://lamp.epfl.ch/publications/index.html.en).
 
-<ul>
+<div id="post_links"><ul>
 {% for p in site.categories.research limit:3 %}
 <li>
 	<a href="{{ p.url }}">{{ p.title }}</a>
 	<span class="date">{{ p.date | date_to_string }}</span> 
 </li>
 {% endfor %}
-</ul>
+</ul></div id="post_links">
 
+{% comment %}
+TODO: add entry for dissertation, parser combinator techreport,...
+{% endcomment %}
+
+Teaching
+========
+<div id="post_links"><ul>
+{% for p in site.categories.teaching limit:3 %}
+<li>
+	<a href="{{ p.url }}">{{ p.title }}</a>
+</li>
+{% endfor %}
+</ul></div id="post_links">
+
+
+{% comment %}
+Professional Activities
+=======================
+PC member: WGP 2008, ScalaDays 2009, FTfJP 2010 
+(sub-)reviewing: JFP (special issues for MSFP 2006, WGP 2009), ICFP 2009, OOPSLA 2009, ECOOP 2010, FOOL 2010
+
+Archive
+=======
+<div id="post_links"><ul>
+{% for p in site.posts %}
+<li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul></div id="post_links">
+{% endcomment %}
 
 -------------
-PS: Sorry about the spartan layout. Maybe some day I'll have some time to dress up my dr. [Jekyll](http://github.com/mojombo/jekyll/wiki) with some [octopress](http://github.com/imathis/octopress).
+PS: Sorry about the spartan layout. Maybe some day I'll have time to dress up my dr. [Jekyll](http://github.com/mojombo/jekyll/wiki) with some [octopress](http://github.com/imathis/octopress) or [jekyll-base](http://github.com/raphinou/jekyll-base).
