@@ -1,0 +1,12 @@
+{% unless site.categories[thecat] == nil %}
+Last three posts in {{thecat}}{% if site.categories[thecat].size > 3 %} (out of {{ site.categories[thecat].size }}){% endif %}:
+
+<ul>
+{% for p in site.categories[thecat] limit:3 %}
+<li>
+	<a href="{{ p.url }}">{{ p.title |  remove: "'" }}</a>
+</li>
+{% endfor %}
+</ul>
+
+{% endunless %}
