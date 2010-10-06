@@ -2,7 +2,7 @@
  "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-   <title>{{page.title}}{{site.title_suffix}}</title>
+   <title>{{page.title |  remove: "'"}}{{site.title_suffix}}</title>
    <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/base/base-min.css">
    <link rel="stylesheet" href="{{site.base_dir}}/css/print.css" type="text/css" media="print" />
@@ -41,12 +41,13 @@
 {% unless site.google_search_api_key == nil or site.google_search_api_key == empty %}
 <div id="search"></div>
 {% endunless%}
-{%unless page.subsections == nil or page.subsections == empty %}
+
+{%unless page.subcategories == nil or page.subcategories == empty %}
 	<ul>
-	{% for section in page.subsections %}
-    {% unless site.categories[section] == nil or site.categories[section] == empty  %}	  
-      <li><a href="{{site.base_dir}}/{{ section }}">{{section}}</a></li>
-    {%endunless%}
+	{% for category in page.subcategories %}
+    {% if category == 'archive' or (site.categories[category] != nil and site.categories[category] != empty)%}	  
+      <li><a href="{{site.base_dir}}/{{ category }}">{{category}}</a></li>
+    {% endif %}
 	{% endfor %}
 	</ul>
 {%endunless%}

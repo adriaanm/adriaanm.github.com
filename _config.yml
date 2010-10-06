@@ -3,11 +3,12 @@ ga_id:
 google_search_api_key:
 google_search_site_url:
 title_suffix: Adriaan Moors's homepage - 
-# To add a new section:
-#   bin/add_section.sh . section_name
+# To add a new category, if you want to be able to access it directly
+# to have it show in the navigation in /, add it to the subcategories in /index.markdown
+#   bin/add_category.sh category_name
 # 
-# To add a new post in a section:
-#   bin/add_new_post.sh ./path/to/section title
+# To add a new post: the categories entry in the post's YAML header decides where the post goes
+#   bin/add_new_post.sh title
 # 
 # If you host your website on Github Pages, you might be interested in the base_dir option in _config.yaml: just set it to 
 #   base_dir: /project_name

@@ -1,19 +1,18 @@
 #!/bin/bash
 
 
-if [[ $# -ne 2 ]] ; then
+if [[ $# -ne 1 ]] ; then
   cat <<-END
-	Needs two arguments: directory of parent section, and new post title, eg
-	$0 ./blog big_news 
+	Needs one argument: new post title, eg
+	$0  big_news 
 	END
   exit 1
 fi
 
-category=$1
-title=$2
+title=$1
 
 date=$(date +%Y-%m-%d)
-file=$category/_posts/$date-$title.markdown
+file=_posts/$date-$title.textile
 cat > $file <<END
 ---
 layout: default

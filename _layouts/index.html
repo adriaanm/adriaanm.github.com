@@ -7,7 +7,7 @@ layout: default
 <div class="section list">
 {% for p in site.categories[page.categories.last] %}
   <p class="line">
-  <a class="title" href="{{site.base_dir}}{{ p.url }}">{{ p.title |  remove:‘'’}}</a>
+  <a class="title" href="{{site.base_dir}}{{ p.url }}">{{ p.title |  remove: "'"}}</a>
   </p>
   <p class="excerpt">{{ p.excerpt }}</p>
 {% endfor %}

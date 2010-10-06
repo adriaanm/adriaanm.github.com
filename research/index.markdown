@@ -1,5 +1,5 @@
 ---
 layout: index
-subsections: []
+subcategories: []
 categories: [research]
 ---

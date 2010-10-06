@@ -3,7 +3,7 @@ layout: default
 title: Home
 
 section: Home
-subsections: [research, teaching, meta, archive]
+subcategories: [research, teaching, meta, archive]
 ---
 
 Adriaan Moors
@@ -28,7 +28,7 @@ I hope to find time to write down some of the stuff I'm working on (or have work
   <ul>
 {% for p in site.categories.research limit:3 %}
 <li>
-	<a href="{{ p.url }}">{{ p.title }}</a>
+	<a href="{{ p.url }}">{{ p.title |  remove: "'" }}</a>
 	<span class="date">{{ p.date | date_to_string }}</span> 
 </li>
 {% endfor %}
@@ -46,7 +46,7 @@ Teaching
   <ul>
     {% for p in site.categories.teaching limit:3 %}
     <li>
-    	<a href="{{ p.url }}">{{ p.title }}</a>
+    	<a href="{{ p.url }}">{{ p.title |  remove: "'" }}</a>
     </li>
     {% endfor %}
   </ul>
