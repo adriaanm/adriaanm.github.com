@@ -23,6 +23,11 @@ body {
 	text-align: center;
 }
 
+/*layout variants*/
+.article p {
+  text-align: justify;
+}
+
 /* Links */
 a:link, a:visited { 
 	text-decoration: none;
@@ -82,24 +87,18 @@ img.float-left {
   	margin: 5px 10px 10px 0px;
 }
 
-pre code {
-   margin: 10px 20px;
-   border: 1px solid #F0F0F0;
+.highlight code {
+  margin: 10px 20px;
+  border: 1px solid #F0F0F0;
+  padding: 10px;
+  text-align: left;
+  display: block;
+/*  overflow: auto;  */
 }
 
 code {
   background: #F8F8F8;  
 }
-/*pre {
-/*    margin: 3px 0;*/
-    padding: 15px;
-    text-align: left;
-    display: block;
-    overflow: auto;  
-    /* white-space: pre; */
-    border: 1px solid #F0F0F0;
-}
-*/
 
 code {
   font: 500 1em/1.5em 'Lucida Console', 'Courier New', Monospace;

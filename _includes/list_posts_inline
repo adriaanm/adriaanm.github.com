@@ -1,0 +1,12 @@
+{% unless site.categories[postsFrom] == nil or site.categories[postsFrom] == empty %}
+Last three posts in {{postsFrom}}{% if site.categories[postsFrom].size > 3 %} (out of {{ site.categories[postsFrom].size }}){% endif %}:
+
+<ul>
+{% for p in site.categories[postsFrom] limit:3 %}
+<li>
+	<a href="{{ p.url }}" title="{{ p.excerpt }}">{{ p.title |  remove: "'" }}</a>
+</li>
+{% endfor %}
+</ul>
+
+{% endunless %}

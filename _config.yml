@@ -1,5 +1,6 @@
 title_suffix: ' - Adriaan Moors'
 files_dir: '/files'
+pygments: true
 # base_dir:
 # ga_id:
 # google_search_api_key:

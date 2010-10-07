@@ -4,15 +4,11 @@ layout: default
 <!-- posts in this category -->
 {% unless site.categories[page.categories.last] == nil or site.categories[page.categories.last] == empty  %}
 <h2>Posts in {{page.categories.last}}</h2>
-<ul class="archive">
-{% for post in site.categories[page.categories.last] %}
-{% unless post.categories contains 'unpublished' %}
-<li class="archive"><span>{{ post.date | date_to_string }}</span>
-  <a href="{{ post.url }}" class="post-title">{{ post.title |  remove:"'" }}</a>
-</li>
-  <li class="post-details">{{ p.excerpt }}</li>
+
+{% assign posts = site.categories[page.categories.last] %}
+{% include list_posts %}
+
 {% endunless %}
-{% endfor %}
-</ul>{% endunless %}
+
 {{ content }}
 
