@@ -80,7 +80,7 @@ scala> foo(List(1,2,3))
 res0: List[Int] = null
 {% endhighlight %}
 
-The inferred type for `res0` shows that `foo`'s type arguments have been inferred as `[List, Int]`, so that `CC[El]` becomes `List[Int]`. Of course, `List` is the type constructor argument that could not be inferred by older versions of `scalac`.
+The inferred type for `res0` shows that `foo`'s type arguments have been inferred as `[List, Int]`, so that `CC[El]` becomes `List[Int]`. Of course, `List` is the type constructor argument that could not be inferred by older versions of `scalac`. Note that the type for `foo` is a type that cannot be expressed in Scala programs. The type `[CC[x],El](xs: CC[El])CC[El]` is is used internally to represent a type function that takes two types -- abstracted over by `CC` and `El` -- and returns the type of a method with one argument list `(xs: CC[El])` and result type `CC[El]`
 
 ##Common Pitfalls
 Often, only the number of higher-order type parameters is important. In that case, you can save some creative energy to come up with different names for them and use an underscore instead.
