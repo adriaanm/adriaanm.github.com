@@ -1,8 +1,9 @@
-base_dir:
-ga_id:
-google_search_api_key:
-google_search_site_url:
-title_suffix:Adriaan Moors
+title_suffix: ' - Adriaan Moors'
+files_dir: '/files'
+# base_dir:
+# ga_id:
+# google_search_api_key:
+# google_search_site_url:
 # To add a new category, if you want to be able to access it directly
 # to have it show in the navigation in /, add it to the subcategories in /index.markdown
 #   bin/add_category.sh category_name
