@@ -4,7 +4,7 @@ Last three posts in {{thecat}}{% if site.categories[thecat].size > 3 %} (out of 
 <ul>
 {% for p in site.categories[thecat] limit:3 %}
 <li>
-	<a href="{{ p.url }}">{{ p.title |  remove: "'" }}</a>
+	<a href="{{ p.url }}" title="{{ p.excerpt }}">{{ p.title |  remove: "'" }}</a>
 </li>
 {% endfor %}
 </ul>

@@ -2,21 +2,14 @@
 layout: default
 title: What's new in Scala 2.8':' type constructor inference
 categories: unpublished
+highlight: 'yes'
+excerpt: Brush up your knowledge of type constructor polymorphism and learn about type constructor inference. These helped reduce code duplication and carve out a cleaner hierarchy for the new collection libraries. You'll better understand what makes the new collections tick and maybe your own code can benefit from them as well.
 ---
-
-<script src="/files/highlight.pack.js"></script> 
-<script> 
-hljs.tabReplace = '    ';
-hljs.initHighlightingOnLoad();
-</script> 
   
 <!-- %% 17 september -->
 
-#Summary
-Brush up your knowledge of type constructor polymorphism and learn about type constructor inference. These helped reduce code duplication and carve out a cleaner hierarchy for the new collection libraries. You'll better understand what makes the new collections tick, and maybe your own code can benefit from them as well.
-
-#Introduction
-Scala has let you abstract over types that take type parameters, such as `List`, since type constructor polymorphism was introduced in version 2.6.
+#Type Constructor Polymorphism
+Scala has let you abstract over types that take type parameters, such as <code>List</code>, since type constructor polymorphism was introduced in version 2.6.
 However, type constructor inference wasn't officially supported until 2.8. Even though our current approach to type constructor inference is fairly limited, it keeps the type constructors that are used in the collection library behind the scenes. It should be noted that Scala 2.8's refined algorithm for implicit search, which is discussed in a separate article, is essential in capturing in the top of the collections hierarchy what varies below it. This article first introduces type constructor polymorphism, illustrates why it is useful and points out some common pitfalls. TODO: structure of second part -- type inference and lead to implicits
 
 <!-- % what is type constructor polymorphism and what is it good for? -->
@@ -27,6 +20,7 @@ For lack of a fuzzier name, types that abstract over types that abstract over ty
 All this may seem unnecessarily complicated at first. Nevertheless, it is simply a product of uniformity and abstraction. Instead of limiting generic types and methods to first-order mechanisms, Scala's higher-order approach is more uniform in that types can be abstracted over, whether they take type parameters or not. In the same way, functions may take arguments that are again functions, which is clearly useful. In Java, though, making a type generic (i.e., introducing a type parameter) excludes it from being abstracted over (i.e., you can't define a type parameter that itself takes type parameters, nor can you apply a type parameter to type arguments). When it comes to abstracting over values, Java's (anonymous) classes are a relatively heavyweight way of passing a method-valued argument (such as a lightweight GUI event handler or a strategy to transform data) to a method.
 
 When reading on, it may help to think about the value-level counterpart to understand higher-order type-level abstractions, which may seem somewhat baffling at first. In the following, we will sometimes replace "type" by "type constructor" in existing terminology to emphasise we are talking about the higher-order variant, without intending to exclude type constructors in other occurrences of "type". We will use "proper type" or "monorphic type" when referring only to types without type parameters.
+
 
 #Example
 <!-- % TODO: everything below: -->
@@ -74,3 +68,4 @@ With the introduction of Scala 2.8's revamped collection library, type construct
 
 % common pitfalls
 % CC[_] <: Traversable[_] -->
+

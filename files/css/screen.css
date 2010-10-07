@@ -82,17 +82,29 @@ img.float-left {
   	margin: 5px 10px 10px 0px;
 }
 
-code {
-  	margin: 3px 0;
-  	padding: 15px;
-  	text-align: left;
-  	display: block;
-  	overflow: auto;  
-  	font: 500 1em/1.5em 'Lucida Console', 'Courier New', Monospace;
-  	/* white-space: pre; */
-  	border: 1px solid #F0F0F0;
-	background: #F8F8F8;  
+pre code {
+   margin: 10px 20px;
+   border: 1px solid #F0F0F0;
 }
+
+code {
+  background: #F8F8F8;  
+}
+/*pre {
+/*    margin: 3px 0;*/
+    padding: 15px;
+    text-align: left;
+    display: block;
+    overflow: auto;  
+    /* white-space: pre; */
+    border: 1px solid #F0F0F0;
+}
+*/
+
+code {
+  font: 500 1em/1.5em 'Lucida Console', 'Courier New', Monospace;
+}
+
 acronym {
   cursor: help;
   border-bottom: 1px dotted #555;
@@ -704,9 +716,6 @@ padding: 2em;
 color: red;
 font-size: 250%;
 background: #ffdddd;
-}
-pre {
-margin: 10px 20px;
 }
 
 #search { width: 18em;}

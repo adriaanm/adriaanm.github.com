@@ -27,7 +27,6 @@ I hope to find time to write down some of the stuff I'm working on (or have work
 {% include category_list  %}
 
 
-
 {% comment %}
 TODO: add entry for dissertation, parser combinator techreport,...
 {% endcomment %}
