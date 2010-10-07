@@ -70,6 +70,18 @@ Thus, type inference has been extended to infer type constructor arguments. Tech
 
 You can see the result of type inference by passing the `-Xprint:typer` option to `scalac`, which prints the program after type checking (and inference).
 
+As an example, consider the following interaction with the Scala REPL:
+
+{% highlight scala %}
+scala> def foo[CC[x], El](xs: CC[El]): CC[El] = null.asInstanceOf[CC[El]]
+foo: [CC[x],El](xs: CC[El])CC[El]
+
+scala> foo(List(1,2,3))
+res0: List[Int] = null
+{% endhighlight %}
+
+The inferred type for `res0` shows that `foo`'s type arguments have been inferred as `[List, Int]`, so that `CC[El]` becomes `List[Int]`. Of course, `List` is the type constructor argument that could not be inferred by older versions of `scalac`.
+
 ##Common Pitfalls
 Often, only the number of higher-order type parameters is important. In that case, you can save some creative energy to come up with different names for them and use an underscore instead.
 Thus, we could have written `class Traversable[CC[_], T]` instead, above. However, perhaps surprisingly, `CC[_] <: Traversable[_]` is **not** equivalent to `CC[X] <: Traversable[X]`. The former expands to `CC[X] <: Traversable[T] forSome {type T}`, where `T` is existentially bound and thus unrelated to `X`.
