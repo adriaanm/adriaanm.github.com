@@ -10,3 +10,4 @@ Last three posts in {{postsFrom}}{% if site.categories[postsFrom].size > 3 %} (o
 </ul>
 
 {% endunless %}
+
