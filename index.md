@@ -21,7 +21,7 @@ I spend a fair amount of time hacking scalac, particularly fixing bugs in the ty
 
 Research
 ========
-I hope to find time to write down some of the stuff I'm working on (or have worked on). In the meantime, please check [DBLP](http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moors:Adriaan.html), ask [Google Scholar](scholar.google.com/scholar?q=author:adriaan+moors), or have a look at [our lab's publication page](http://lamp.epfl.ch/publications/index.html.en).
+I hope to find time to write down some of the stuff I'm working on (or have worked on). In the meantime, please check [DBLP](http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moors:Adriaan.html), ask [Google Scholar](http://scholar.google.com/scholar?q=author:adriaan+moors), or have a look at [our lab's publication page](http://lamp.epfl.ch/publications/index.html.en).
 
 {% comment %}all this fuss with partial includes -- why can't we just have methods!? {% endcomment %}
 {% assign postsFrom = 'research' %}
